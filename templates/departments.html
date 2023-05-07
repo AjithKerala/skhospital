@@ -1,0 +1,40 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+    <div style="background-color:#0476bc;color:white">
+       <div class="row">
+           <div class="col-md-2">
+
+           </div>
+           <div class="col-md-8">
+                <div style="text-align:center;">
+            <h3>Our Departments</h3>
+            <p >There are 30 different specialties or super specialties in the centre. This with a team of expert doctors and advanced facilities makes SK Hospital one of the best multi-specialty hospitals in Trivandrum and in Kerala.</p>
+        </div>
+
+           </div>
+           <div class="col-md-2">
+
+           </div>
+
+       </div>
+    </div>
+<div class="container">
+    <div class="row mt-3">
+        {% for i in value %}
+    <div class="col-md-4 my-4">
+    <div class="card " style="width: 18rem; " id="one">
+  <div class="card-body" style="cursor:pointer">
+ <img src="{{i.image.url}}" class="mx-auto d-block" style="width:4rem;" alt="...">
+<h6 class="card-subtitle mt-2 text-body-secondary" style="text-align:center">{{i.depart}}</h6>
+
+
+
+  </div>
+</div>
+        </div>
+        {% endfor %}
+</div>
+</div>
+{% endblock %}
